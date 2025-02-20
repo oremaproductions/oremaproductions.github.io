@@ -1,0 +1,36 @@
+html {
+  font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 992px) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 1.8rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6rem;
+  }
+}
