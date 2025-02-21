@@ -5,12 +5,25 @@ html {
 @media (min-width: 576px) {
   html {
     font-size: 1.2rem;
+    .carousel .openingBox .my-fs1 {
+      font-size: 1.1rem;
+    }
+    .carousel .openingBox .my-fs4 {
+        font-size: 0.7rem;
+    }
   }
 }
 @media (min-width: 768px) {
   html {
     font-size: 1.4rem;
   }
+  .carousel .openingBox .my-fs1 {
+      font-size: 1.30rem;
+    }
+    .carousel .openingBox .my-fs4 {
+        font-size: 1rem;
+    }
+
 }
 @media (min-width: 992px) {
   html {
@@ -19,18 +32,6 @@ html {
 }
 @media (min-width: 1200px) {
   html {
-    font-size: 1.8rem;
-  }
-}
-
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 1.4rem;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 }
