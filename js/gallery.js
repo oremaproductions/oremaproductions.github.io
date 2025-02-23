@@ -29,7 +29,8 @@ function alterOpeningText (){
 }
 
 	//change opening text every 9secs
-	setInterval(alterOpeningText,9000)
+	setInterval(alterOpeningText,9000);
+	
 $(window).on('load', () => {
 
 

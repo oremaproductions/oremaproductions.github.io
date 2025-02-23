@@ -93,29 +93,6 @@ img.p-1.img-fluid {
 }
 
 
-#grad-imgs img {
-    border: 10px solid #fff;
-    border-bottom: 45px solid #fff;
-    -webkit-box-shadow: 3px 3px 3px #777;
-    -moz-box-shadow: 3px 3px 3px #777;
-    box-shadow: 3px 3px 3px #777;
-}
-
-#studio-imgs .col {}
-
-#studio-imgs .col:has(img) {
-    scale: 1;
-    transition: scale 0.6s ease-in;
-}
-
-#studio-imgs .col:has(img):hover {
-    cursor: pointer;
-    scale: 1.02;
-    z-index: 4;
-    box-shadow: 1px 1px solid grey;
-}
-
-#studio-imgs .col img:nth-child(n+2):nth-child(-n+4) {}
 
 .flex-col {
     flex-direction: column !important;
@@ -237,51 +214,6 @@ div.openingBox:hover {
     }
 }
 
-.carousel-indicators {
-    justify-content: flex-start;
-    li {
-        width: 2rem;
-        height: 0.12rem;
-        opacity: 0.5; 
-        background: red; 
-    }
-
-
-    ::marker {
-        /* display: list-item; */
-        color: red;
-        content: none;
-        /* font-size: 3rem; */
-        /* margin: 0.5rem; */
-    }
-}
-.carousel .carousel-inner .killCarousel{
-    opacity: 0.6;
-    transition: opacity ease .7s;
-    img {
-        border-radius: 0.25rem;
-    }
-    
-} 
-.killCarousel:not(.carousel-item)::hover {
-    
-
-}
-.killCarousel.active {
-    opacity: 1!important;
-}
-.carousel.carousel-fade .carousel-item {
-        opacity: 0;
-
-        transition: opacity ease .7s;
-       
-
-    }
-
-    .carousel.carousel-fade .carousel-item.active {
-        opacity: 1;
-        transition: opacity ease .7s;
-    }
 
 .my-fs1 {
     font-size: 2.0rem;

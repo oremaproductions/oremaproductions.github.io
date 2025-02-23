@@ -1,0 +1,61 @@
+.carousel-indicators {
+    justify-content: flex-start;
+    li {
+        width: 2rem;
+        height: 0.12rem;
+        opacity: 0.5; 
+        background: red; 
+    }
+
+
+    ::marker {
+        /* display: list-item; */
+        color: red;
+        content: none;
+        /* font-size: 3rem; */
+        /* margin: 0.5rem; */
+    }
+}
+
+
+.killCarousel{
+    filter:brightness(0.4);
+    transition: filter .7s ease;
+    img {
+        border-radius: 0.25rem;
+    }
+    &:hover{
+        cursor: pointer;
+        filter: brightness(0.48);
+        .openingBox .dim{
+            opacity: 1;
+        }
+    }
+    
+}
+.carousel-item{
+
+}
+/*active non carousel item killCarousel containers are brighter */
+.killCarousel.activated {
+        filter:brightness(1.1)!important;
+
+        .openingBox .dim{
+                opacity: 1;
+            }
+
+
+    }
+
+
+ .galleries-container {
+    opacity:0;
+    transition: opacity ease 1s;
+ }
+ .galleries-container:not(.active) {
+     display:none;
+
+ }
+ .galleries-container.active {
+    opacity: 1;
+ }
