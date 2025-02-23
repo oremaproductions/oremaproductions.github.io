@@ -2,6 +2,10 @@ body {
     --prim-color: #ab000c;
     background: black;
 }
+html, body {
+    margin: 0;
+    height: 100vh;
+}
 
 .btn-outline-danger {
     --bs-btn-color: var(--prim-color);
@@ -77,6 +81,7 @@ img.p-1.img-fluid {
 #openingCarousel {
     display: flex;
     flex-direction: row;
+    max-height: 100vh;
 
     >* {
         flex: 0 0 100%;
@@ -222,6 +227,9 @@ div.openingBox:hover {
 .my-fs4 {
     font-size: 1.3rem;
 }
+#svg885 >path {
+    fill:var(--prim-color) !important;
+}
 
 .thmbs {
     flex-wrap: wrap;
@@ -274,6 +282,9 @@ div.openingBox:hover {
 
 .group img {
     padding: 0 12px !important;
+    object-fit: cover;
+    object-position: top;
+
 }
 
 
