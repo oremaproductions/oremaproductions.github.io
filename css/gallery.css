@@ -40,10 +40,16 @@
                 opacity:1;
                 transition: opacity 0.4s ease-in;
             }
+
+.openingBox h1{
+    transition: transform 0.8s ease;
+}
 /*active non carousel item killCarousel containers are brighter */
 .killCarousel.activated {
         filter:brightness(1.1)!important;
-
+        .openingBox h1{
+            transform: translateY(1.2rem);
+        }
         .openingBox .dim{
                 opacity: 1;
             }
