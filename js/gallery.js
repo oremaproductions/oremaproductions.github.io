@@ -1,8 +1,13 @@
 const openingStatements = [
-	{'header':'See My Vision','subtext' : 'View Gallery'},
-	{'header':'Let\'s Collab', 'subtext' : 'Learn More'}
+	{'header':'See My Vision','subtext' : 'View Gallery','link': 'gallery.html'},
+	{'header':'Let\'s Collab', 'subtext' : 'Learn More', 'link' : 'collabs.html'}
 ];
+let openingLink = 'gallery.html';
 let statementIndex = 0;
+
+function redirectTo(link) {
+	window.location.replace(link);
+}
 //hide #box
 function hideOpeningText() {
 	$('#box').hide('fade',1500,'ease'); 
@@ -11,6 +16,9 @@ function hideOpeningText() {
 function setOpeningText(header,subtext) {
 	document.querySelector('#openingHeader').innerText = header;
 	document.querySelector('#openingSubtext').innerText = subtext; 
+}
+function setOpeningLink(link) {
+	return (document.querySelector('#box').dataset.target=link);
 }
 ////show opening box
 function showOpeningText() {
@@ -24,6 +32,7 @@ function alterOpeningText (){
 	// Wait a bit and show updated text
 	setTimeout(()=> {
 		setOpeningText(openingStatements[statementIndex]['header'],openingStatements[statementIndex]['subtext']);
+		setOpeningLink(openingStatements[statementIndex]['link']);
 		showOpeningText();
 	},1500);
 }

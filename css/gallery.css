@@ -36,12 +36,19 @@
 .carousel-item{
 
 }
+.openingBox  span, .openingBox i{
+                opacity:1;
+                transition: opacity 0.4s ease-in;
+            }
 /*active non carousel item killCarousel containers are brighter */
 .killCarousel.activated {
         filter:brightness(1.1)!important;
 
         .openingBox .dim{
                 opacity: 1;
+            }
+            .openingBox  span, .openingBox i{
+                opacity:0;
             }
 
 
@@ -58,5 +65,5 @@
  }
  .galleries-container.active {
     opacity: 1;
-    
+
  }

@@ -307,7 +307,3 @@ div.openingBox:hover {
         transform: translateX(-100%);
     }
 }
-@keyframes galSlideOut {
-
-}
-@keyframes galSlideIn {}
