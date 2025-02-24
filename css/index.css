@@ -205,7 +205,7 @@ div.openingBox:hover {
 #collab {
     color: white;
     background: linear-gradient(to bottom right, black, transparent 33%), radial-gradient(ellipse at 0% 26%, hsl(0 75% 13% / 1) 0px, transparent 45%), radial-gradient(ellipse at 108% 100%, #590d0d 0px, transparent 44%);
-    min-height: 200px;
+    min-height: 55vh;
     justify-content: space-evenly;
 
     button {
@@ -286,8 +286,43 @@ div.openingBox:hover {
     object-position: top;
 
 }
+ .divider{
+    max-height: 40px;
+    height: 2rem;
+    background: url('../components/photoreelDivider.png');
+    background-size: contain;
+}
+.marquee-2 { 
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    >* {
+        flex: 0 0 100%;
+    }
+    >div.divider {
+        animation: scrolling3 15s linear infinite;
+    }
+}
+.footerLink {
+    text-decoration: none;
+    color:white;
+    opacity: 0.6;
+    line-height: 2rem;
+    transition: opacity 0.3s linear;
+}
+.footerLink:hover, .footerLink.active {
+    text-decoration: none;
+    opacity: 1;
+}
+@keyframes scrolling3 {
+    0% {
+        transform: translateX(0);
+    }
 
-
+    100% {
+        transform: translateX(-100%);
+    }
+}
 @keyframes scrolling {
     0% {
         transform: translateX(0);
