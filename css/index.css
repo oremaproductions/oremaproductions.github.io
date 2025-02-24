@@ -46,9 +46,8 @@ html, body {
 }
 
 nav.navbar {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 88%), transparent 75%) !important;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 39%), transparent 88%) !important;
     z-index: 8;
-
 }
 
 #logo {
@@ -116,7 +115,7 @@ img.p-1.img-fluid {
 }
 
 #overlay-gallery {
-    background: linear-gradient(0deg, black, transparent 60%);
+    background: linear-gradient(0deg, black, transparent 36%);
     top: 3px;
     transition: background 1s ease-in-out !important;
     z-index: 6;
@@ -143,8 +142,8 @@ img.p-1.img-fluid {
 }
 
 #group2 {
-    transform: translateX(200%);
-    animation: scrolling2 35s linear infinite;
+    transform: translateX(300%);
+    animation: scrolling2 50s linear infinite;
 }
 
 .pause {
@@ -275,7 +274,7 @@ div.openingBox:hover {
     /* ... */
     will-change: transform;
     /* We should be nice to the browser - let it know what we're going to animate. */
-    animation: scrolling 35s linear infinite;
+    animation: scrolling 50s linear infinite;
 
 
 }
@@ -283,8 +282,7 @@ div.openingBox:hover {
 .group img {
     padding: 0 12px !important;
     object-fit: cover;
-    object-position: top;
-
+    object-position: center 30%;
 }
  .divider{
     max-height: 40px;
@@ -329,13 +327,13 @@ div.openingBox:hover {
     }
 
     100% {
-        transform: translateX(-300%);
+        transform: translateX(-400%);
     }
 }
 
 @keyframes scrolling2 {
     0% {
-        transform: translateX(200%);
+        transform: translateX(300%);
     }
 
     100% {
