@@ -32,6 +32,12 @@
     }
     
 }
+.footer .divider{
+    max-height: 40px;
+    height: 2rem;
+    background: url('../components/photoreelDivider.png');
+    background-size: contain;
+}
 .carousel-item{
 
 }

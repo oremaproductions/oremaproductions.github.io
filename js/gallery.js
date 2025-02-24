@@ -5,9 +5,7 @@ const openingStatements = [
 let openingLink = 'gallery.html';
 let statementIndex = 0;
 
-function redirectTo(link) {
-	window.location.replace(link);
-}
+
 //hide #box
 function hideOpeningText() {
 	$('#box').hide('fade',1500,'ease'); 
