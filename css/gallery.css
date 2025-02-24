@@ -16,7 +16,12 @@
         /* margin: 0.5rem; */
     }
 
-
+.carousel-control-next-icon {
+    filter: drop-shadow(1px 1px 1px black) !important;
+}
+.carousel-control-prev-icon {
+    filter: drop-shadow(-1px -1px 1px black) !important;
+}
 .killCarousel{
     filter:brightness(0.4);
     transition: filter .7s ease;

@@ -6,7 +6,9 @@ html, body {
     margin: 0;
     height: 100vh;
 }
-
+.pl-2 {
+    padding-left:1rem!important;
+}
 .btn-outline-danger {
     --bs-btn-color: var(--prim-color);
     --bs-btn-border-color: var(--prim-color);
@@ -111,7 +113,7 @@ img.p-1.img-fluid {
 }
 
 .pt-0-3 {
-    padding-top: 0.35rem;
+    padding-top: 0.37rem;
 }
 
 #overlay-gallery {
@@ -232,39 +234,52 @@ div.openingBox:hover {
 
 .thmbs {
     flex-wrap: wrap;
-
+    
+    .thmb > div:nth-child(1) {
+        img {
+        border-radius: 10px 0 0 10px;
+        }
+    }
+    .thmb > div:nth-child(2) {
+        background: #121212;
+    }
+    .thmb > div:nth-child(3) {
+        background:#121212;
+        border-radius:0px 10px 10px 0;
+    }
     .thmb-name {
         font-weight: bold;
     }
-}
 
-.thmbs .thmb-cover img {
-    border-radius: 10px;
-}
 
-.thmbs .thmb-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    
 
-    .thmb-description,
-    .thmb-action {
-        color: #d3d3d3;
+    .thmb-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .thmb-description,
+        .thmb-action {
+            color: #d3d3d3;
+        }
+
+        .thmb-btn {
+            font-weight: bold;
+        }
     }
 
     .thmb-btn {
-        font-weight: bold;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .thmb-btn button {
+        height: fit-content;
     }
 }
 
-.thmbs .thmb-btn {
-    align-items: center;
-    justify-content: center;
-}
 
-.thmbs .thmb-btn button {
-    height: fit-content;
-}
 
 .primary-icon {
     color: var(--prim-color);
@@ -284,9 +299,9 @@ div.openingBox:hover {
     object-fit: cover;
     object-position: center 30%;
 }
- .divider{
-    max-height: 40px;
-    height: 2rem;
+.divider {
+    max-height: 3rem;
+    height: 2.5rem;
     background: url('../components/photoreelDivider.png');
     background-size: contain;
 }
