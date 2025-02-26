@@ -29,6 +29,7 @@
 
         // if bookedTimes array matches the allTimes array length 
         if(bookedTimes.length === allTimes.length) {
+          
           fullyBookedDates.push(bookedDate); // add to array of fullybooked dates
         }
       }
@@ -36,13 +37,16 @@
     }
   function updateTimeSlots(selectedDate) {
     let timeBtns = document.getElementById("time-slot-btns");
+    let count = document.getElementById("slotCount");
     let availableTimes = (bookedData[selectedDate]) ? allTimes.filter(time => !bookedData[selectedDate].includes(time)) : allTimes; //filter out unavailable timeslots
     $(timeBtns).empty(); // Reset times
+    count.innerText = availableTimes.length;
 
     if (availableTimes.length === 0) {
       timeBtns.innerHTML = "<span class='text-white'>No times available</span>";
       return false;
     }
+
     availableTimes.forEach(time => {
       let btn = document.createElement("button");
       btn.innerText = time;
