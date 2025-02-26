@@ -1,4 +1,3 @@
-$('.killCarousel').addClass('carousel-item');
 
 
 function isCarouselGoing () {

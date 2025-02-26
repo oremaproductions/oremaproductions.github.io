@@ -6,8 +6,17 @@ html, body {
     margin: 0;
     height: 100vh;
 }
+.max-vh-100{
+    max-height:100vh!important;
+}
+.max-vh-50{
+    max-height:50vh!important;
+}
 .pl-2 {
-    padding-left:1rem!important;
+    padding-left:1.25rem!important;
+}
+.pos-c-b {
+    background-position:center bottom !important;
 }
 .btn-outline-danger {
     --bs-btn-color: var(--prim-color);
@@ -74,8 +83,7 @@ img.p-1.img-fluid {
 }
 
 #displayBkg {
-    clip-path: border-box;
-    max-height: 100vh !important;
+    clip-path: border-box; 
     background: black;
 }
 
