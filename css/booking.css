@@ -1,0 +1,63 @@
+.flatpickr-calendar {
+    width: 100%;
+    div, select, .flatpickr-weekdaycontainer span {
+        background: black!important;
+    }
+}
+
+.flatpickr-innerContainer {
+    width:100%
+}
+
+.flatpickr-rContainer {
+    width: 100%;
+}
+.flatpickr-months{
+padding-top:1rem!important;
+padding-bottom:1rem;
+}
+
+.flatpickr-calendar.animate.inline {
+    box-shadow: none!important;
+}
+.flatpickr-days {
+    width: 100%;
+}
+
+.dayContainer {
+    width: 100%;
+     max-width:100%;
+}
+
+span.flatpickr-day {
+    max-width: calc(100%/7)!important;
+    height: 2.5rem!important;
+    vertical-align: middle!important;
+    display: flex;
+    align-items:center;
+    color:white;
+}
+span.flatpickr-day.flatpickr-disabled {
+    color: #7f7f7f;
+}
+span.flatpickr-day.nextMonthDay {
+    color: lightgrey;
+}
+.slotBtn {
+    background:#1c1c1c;
+    border:none;
+}
+#coverImg {
+    max-height: 700px!important;
+    object-fit: cover;
+}
+
+
+
+p.text-white.m-0.fs-6.font-3.p-0.mb-4 {
+    color: #cbcbcb!important;
+}
+
+p.font-3.fs-7.col-12.text-white.text-sm-center.mt-3.mb-5 {
+    color: #cbcbcb!important;
+}
