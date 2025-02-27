@@ -29,6 +29,10 @@ padding-bottom:1rem;
      max-width:100%;
 }
 
+#timeslots, #nextStep {
+    opacity: 0;
+    transition:opacity .6s ease;
+}
 span.flatpickr-day {
     max-width: calc(100%/7)!important;
     height: 2.5rem!important;
