@@ -1,0 +1,19 @@
+div#formContainer {
+    label{
+        color: #939393;
+        padding-bottom: 0.5rem;
+    }
+    input, textarea{
+        margin-bottom: 1.5rem;
+        padding: 0.5rem;
+        color:white;
+        font-size: 1.25rem;
+        background: #100f0f;
+        border:none;
+    /* border-bottom:1px solid white; */
+    }
+    
+}
+p.text-secondary.fs-6.m-0.fs-6.font-3.p-5.text-center.pt-2.mb-2.d-sm-block.pb-2 {
+    color: #d0d0d0!important;
+}
