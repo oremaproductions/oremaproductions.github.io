@@ -54,8 +54,8 @@ const formattedToday =yyyy + '-' + mm + '-' + dd;
     }
     function setDateSlot(date) {
       // set hidden input for time slot  
-      document.getElementById("date").value = date;
       setTimeSlot("");
+      document.getElementById("date").value = date;
     }
 
     function setTimeSlot(time) {
@@ -82,14 +82,15 @@ const formattedToday =yyyy + '-' + mm + '-' + dd;
     let timeBtns = document.getElementById("time-slot-btns");
     let count = document.getElementById("slotCount");
     let availableTimes = (bookedData[selectedDate]) ? allTimes.filter(time => !bookedData[selectedDate].includes(time)) : allTimes; //filter out unavailable timeslots
-    
+    console.log(`available slots for ${selectedDate}: ${availableTimes}`);
     $(timeBtns).empty(); // Reset times
     count.innerText = availableTimes.length;
 
     setDateSlot(selectedDate);
-    if (availableTimes.length === 0) { 
+    if (availableTimes.length === 0 || selectedDate == undefined) { 
       return false;
-    }
+    } 
+    showTimeSlots();
     availableTimes.forEach(time => {
       let btn = document.createElement("button");
       btn.innerText = formattedTime(time);
