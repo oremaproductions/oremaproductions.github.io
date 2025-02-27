@@ -64,9 +64,9 @@ const formattedToday =yyyy + '-' + mm + '-' + dd;
 
       //If values of inputs are filled, set opacity of btn to 1
       if ((document.getElementById("time").value.length > 0) && (document.getElementById("date").value.length > 0)) {
-        $("#nextStep").css({'opacity' : '1'});
+        $("#nextSteps").css({'opacity' : '1'});
       } else { // set opacity to 0
-        $("#nextStep").css({'opacity' : '0'});
+        $("#nextSteps").css({'opacity' : '0'});
       }
 
     }
@@ -77,6 +77,19 @@ const formattedToday =yyyy + '-' + mm + '-' + dd;
 
       return hour + ":" + splitData[1] + " " + splitData[2];
     }
+  function handleCheck(status) {
+    
+    console.log(status)
+
+    //if status == true, udisable btn.  else, disable
+    return (status == true) ? $("#nextStep").removeClass("disabled") : $("#nextStep").addClass("disabled");
+}
+function handlePolicies(e) {
+  console.log('policies');
+  e.preventDefault();
+  $('#exampleModalLong').modal('show');
+}
+
   function updateTimeSlots(selectedDate) { 
     console.log(selectedDate);
     let timeBtns = document.getElementById("time-slot-btns");

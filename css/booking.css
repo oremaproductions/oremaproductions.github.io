@@ -29,7 +29,7 @@ padding-bottom:1rem;
      max-width:100%;
 }
 
-#timeslots, #nextStep {
+#timeslots, #nextSteps {
     opacity: 0;
     transition:opacity .6s ease;
 }
@@ -54,6 +54,10 @@ span.flatpickr-day.nextMonthDay {
 #coverImg {
     max-height: 700px!important;
     object-fit: cover;
+}
+button.p-0.m-0.text-white.dim.text {
+    border: none;
+    background: transparent;
 }
 
 .flatpickr-day.selected,
@@ -125,4 +129,20 @@ div#navbarNavDropdown ul {
         }
         
     }
+}
+div#formContainer {
+    label{
+        color: #939393;
+        padding-bottom: 0.5rem;
+    }
+    input, textarea{
+        margin-bottom: 1.5rem;
+        padding: 0.5rem;
+        color:white;
+        font-size: 1.25rem;
+        background: #100f0f;
+        border:none;
+    /* border-bottom:1px solid white; */
+    }
+    
 }

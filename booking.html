@@ -21,6 +21,66 @@
     </head>
 
     <body>
+        <!-- Modal -->
+        <div class="modal fade  col-10 " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" >
+            <div class="modal-dialog " role="document">
+                <div class="modal-content m-auto w-75">
+                    <div class="modal-header justify-content-between">
+                        <h5 class="modal-title font-1" id="exampleModalLongTitle">Privacy &amp; Understanding</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <section id="privacy-understanding p-4 font-3">
+                            
+                            <section id="privacy-policy"> 
+                                <p>We value your privacy and are committed to protecting any personal information you share with us. This section outlines how we collect, use, and safeguard your data.</p>
+                                <h4>Information Collection:</h4>
+                                <ul>
+                                    <li>We collect personal details such as name, email, and contact information when you book services or interact with our website.</li>
+                                    <li>Non-personal data such as IP addresses, browser type, and site usage may be gathered for analytics purposes.</li>
+                                </ul>
+                                <h4>Use of Information:</h4>
+                                <ul>
+                                    <li>Your information is used to provide services, process transactions, and enhance your experience on our website.</li>
+                                    <li>We do not sell or share your personal data with third parties except when necessary to fulfill services (e.g., payment processing).</li>
+                                </ul>
+                                <h4>Data Protection:</h4>
+                                <ul>
+                                    <li>We implement industry-standard security measures to protect your data from unauthorized access, loss, or misuse.</li>
+                                    <li>While we take precautions, no online platform can guarantee complete security.</li>
+                                </ul>
+                            </section>
+                            <section id="understanding-commitment">
+                                <h3>Understanding Our Commitment</h3>
+                                <p>We believe in transparency and mutual respect when engaging with our customers. Here’s what you can expect:</p>
+                                <h4>Honest Communication:</h4>
+                                <ul>
+                                    <li>We strive to provide clear and honest information about our services, pricing, and policies.</li>
+                                    <li>If you have any questions or concerns, we encourage open communication.</li>
+                                </ul>
+                                <h4>Customer Respect:</h4>
+                                <ul>
+                                    <li>We respect your time and privacy and aim to offer a seamless, professional experience.</li>
+                                    <li>Our policies are designed to be fair and considerate of both parties.</li>
+                                </ul>
+                                <h4>Feedback &amp; Support:</h4>
+                                <ul>
+                                    <li>Your feedback is valuable in improving our services. Feel free to share your thoughts or concerns.</li>
+                                    <li>Our support team is here to assist you with any inquiries related to privacy, services, or general assistance.</li>
+                                </ul>
+                                <p>For further details or inquiries, please contact us at [Your Contact Information].</p>
+                            </section>
+                        </section>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary font-3" data-dismiss="modal">Close</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="" class="container-fluid p-0  position-relative">
             <nav class="navbar navbar-expand-lg bg-dark w-100 p-2 pb-0 position-relative" data-bs-theme="dark">
                 <div class="container-fluid p-0">
@@ -48,9 +108,9 @@
                                     <li><a class="dropdown-item" href="#">Premium</a></li>
                                     <li><a class="dropdown-item" href="#">Packages</a></li>
                                 </ul>
-                            </li> 
+                            </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Collabs</a>
+                                <a class="nav-link" href="collabs.html">Collabs</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Warehouse</a>
@@ -93,12 +153,19 @@
                     <p class="text-white m-0 mt-4 fs-7 p-2 font-3"><span id="slotCount">10</span> Slot(s) Available</p>
                     <div id="time-slot-btns" class="col-12 d-flex flex-wrap row-cols-3 p-2"></div>
                 </div>
-                <div class="col-12 mt-4"> 
-                    <form action="#" method="post">
+                <div class="p-2 col-12 mt-4" id="nextSteps">
+                    <form action="#" method="get">
                         <input type="text" class="d-none" id="service" name="service">
                         <input type="text" class="d-none" id="date" name="date">
                         <input type="text" class="d-none" id="time" name="time">
-                        <button type="submit" id="nextStep" class="btn btn-danger col-12 btn-lg p-2">Next</button>
+                        <div class="p-0 form-check d-flex flex-row align-items-center mb-2 gap-2">
+                            <input class="form-check-input m-0" type="checkbox" onclick="handleCheck(this.checked)" value="" id="flexCheckDefault" style="
+">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                <span class="text-start text-secondary fs-7 m-0">I have read and understood the <button class="p-0 m-0 btn-link text-white dim text" type="button" onclick="handlePolicies" data-toggle="modal" data-target="#exampleModalLong"> Privacy &amp; Understanding </button> section</span>
+                            </label>
+                        </div>
+                        <button type="submit" id="nextStep" class="disabled btn btn-danger col-12 btn-lg p-2">Next</button>
                     </form>
                 </div>
             </div>
@@ -167,7 +234,7 @@
         <div id="collab" class="d-flex w-100  pt-5 pb-5 justify-content-center flex-col align-items-center position-relative ">
             <span class="fs-1 font-1" id='gal-cta-header'>Your Story, Captured</span>
             <span class="my-fs4 subtext font-2" id='gal-cta-subtext'>Lock in your session today</span>
-            <button class="id btn-md btn btn-light  font-2 mt-4 p-2" id="gal-cta-btn" onclick="redirectTo(this.dataset.target)" target="index.html">Book Your Shoot</button>
+            <button class="id btn-md btn btn-light  font-2 mt-4 p-2" id="gal-cta-btn" onclick="redirectTo(this.dataset.target,'replace')" target="index.html">Book Your Shoot</button>
         </div>
         <div class="marquee-2 d-flex row nowrap">
             <div class="divider w-100"></div>
@@ -179,7 +246,7 @@
                     <a href="index.html" class="footerLink">Home</a>
                     <a href="gallery.html" class="footerLink ">Gallery</a>
                     <a href="#" class="footerLink active">Book Orema</a>
-                    <a href="index.html" class="footerLink">Collaborate</a>
+                    <a href="collabs.html" class="footerLink">Collaborate</a>
                     <a href="index.html" class="footerLink">About</a>
                 </div>
                 <div class="col d-flex flex-col wrap p-0 fs-7 w-auto opacity-0">
