@@ -110,9 +110,6 @@ p.font-3.fs-7.col-12.text-white.text-sm-center.mt-3.mb-5 {
     color: #cbcbcb!important;
 }
 
-div#navbarNavDropdown ul {
-    font-size: 0.7rem!important;
-}
 
 .flatpickr-months {
     & > span {
