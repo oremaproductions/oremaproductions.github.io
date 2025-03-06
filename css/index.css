@@ -268,7 +268,11 @@ div.openingBox:hover {
         font-weight: bold;
     }
 
-
+    span.thmb-description{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
     
 
     .thmb-text {

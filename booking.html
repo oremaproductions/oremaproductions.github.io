@@ -104,7 +104,7 @@
                                     Book OP
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="booking.html?service='service1'">Hourly</a></li>
+                                    <li><a class="dropdown-item" href="booking.html?service=service1">Hourly</a></li>
                                     <li><a class="dropdown-item" href="#">Premium</a></li>
                                     <li><a class="dropdown-item" href="#">Packages</a></li>
                                 </ul>
@@ -133,20 +133,26 @@
     /* order: 1; */
 ">
                 <div class="col-12 w-auto d-flex align-items-center align-items-sm-start flex-col">
-                    <span class="fs-4 text-white font-1 d-sm-none">
+                    <span class="fs-4 text-white font-1 d-sm-none" name="service_alias">
                         Service #1
                     </span>
+                    <p class="font-3 fs-7 col-12 text-white text-center text-sm-start d-sm-none fw-bold" name="service_price">
+                        
+                    </p>
                     <p class="text-white m-0 fs-6 font-3 p-0 mb-4 d-sm-none">Let's get you on the calendar. </p>
-                    <img src="imgs/orema11.jpg" id="coverImg" alt="" class="img-fluid col-10 col-sm-12 p-1 rounded">
-                    <p class="font-3 fs-7 col-12 text-white text-center text-sm-start mt-4 mb-5 ">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ligula nec justo scelerisque feugiat. Proin quis augue at justo vulputate scelerisque. Aenean sit amet felis nec lorem hendrerit dictum. Integer non diam ac quam gravida cursus. Ut non risus vel felis dapibus fermentum eget ac lorem.
+                    <img src="" id="coverImg" alt="" class="img-fluid col-10 col-sm-12 p-1 rounded">
+                    <p class="font-3 fs-7 col-12 text-white text-center text-sm-start mt-4 mb-3 " id="service_description">
+                        
                     </p>
                 </div>
             </div>
             <div class="col-12 col-lg-5 col-sm-6 p-2 ">
-                <span class="fs-4 text-white font-1 d-none d-sm-block">
+                <span class="fs-4 text-white font-1 d-none d-sm-block" name="service_alias">
                     Service #1
                 </span>
+                <p class="font-3 fs-7 col-12 text-white text-center d-none text-sm-start d-sm-block fw-bold" name="service_price">
+                        
+                    </p>
                 <p class="text-white m-0 fs-6 font-3 p-0 mb-4 d-none d-sm-block">Let's get you on the calendar. </p>
                 <div id="calendar-container" class="flatpickr-input" readonly="readonly"></div>
                 <div id="timeslots" class="">
@@ -172,63 +178,10 @@
         </div>
         <div class="container-fluid bg-dark p-2 pt-2 pb-2 mt-4">
             <span class="fs-4 text-white font-1 p-4">
-                All Services
+                Other Services
             </span>
-            <div class="thmbs mb-3 d-flex mt-1 p-3 justify-content-center">
-                <div class="col-12 col-sm-6 p-2 row m-0  thmb  ">
-                    <div class="col thmb-cover p-0"><img src="imgs/orema11.jpg" alt="" class="img-fluid"></div>
-                    <div class="w-auto flex-col justify-content-center thmb-text pl-2 text-white">
-                        <span class="fs-5 thmb-name font-3">Service #1</span>
-                        <span class="thmb-description fs-5 font-2">Service Description</span>
-                        <span class="thmb-action  font-2">$39.99</span>
-                    </div>
-                    <div class="col thmb-btn d-flex"><button class="btn btn-danger text-white font-2">Book</button></div>
-                </div>
-                <div class="col-12 col-sm-6 p-2 row m-0  thmb ">
-                    <div class="col thmb-cover p-0"><img src="imgs/orema12.jpg" alt="" class="img-fluid"></div>
-                    <div class="w-auto flex-col justify-content-center thmb-text pl-2 text-white">
-                        <span class="fs-5 thmb-name font-3">Service #2</span>
-                        <span class="thmb-description fs-5 font-2">Service Description</span>
-                        <span class="thmb-action  font-2">$39.99</span>
-                    </div>
-                    <div class="col thmb-btn d-flex"><button class="btn btn-danger text-white font-2">Book</button></div>
-                </div>
-                <div class="col-12 col-sm-6 p-2 row m-0  thmb ">
-                    <div class="col thmb-cover p-0"><img src="imgs/orema13.jpg" alt="" class="img-fluid"></div>
-                    <div class="w-auto flex-col justify-content-center thmb-text pl-2 text-white">
-                        <span class="fs-5 thmb-name font-3">Service #3</span>
-                        <span class="thmb-description fs-5 font-2">Service Description</span>
-                        <span class="thmb-action font-2">$39.99</span>
-                    </div>
-                    <div class="col thmb-btn d-flex"><button class="btn btn-danger text-white font-2">Book</button></div>
-                </div>
-                <div class="col-12 col-sm-6 p-2 row m-0  thmb ">
-                    <div class="col thmb-cover p-0"><img src="imgs/orema13.jpg" alt="" class="img-fluid"></div>
-                    <div class="w-auto flex-col justify-content-center thmb-text pl-2 text-white">
-                        <span class="fs-5 thmb-name font-3">Service #3</span>
-                        <span class="thmb-description fs-5 font-2">Service Description</span>
-                        <span class="thmb-action font-2">$39.99</span>
-                    </div>
-                    <div class="col thmb-btn d-flex"><button class="btn btn-danger text-white font-2">Book</button></div>
-                </div>
-                <div class="col-12 col-sm-6 p-2 row m-0  thmb  ">
-                    <div class="col thmb-cover p-0"><img src="imgs/orema11.jpg" alt="" class="img-fluid"></div>
-                    <div class="w-auto flex-col justify-content-center thmb-text pl-2 text-white">
-                        <span class="fs-5 thmb-name font-3">Service #1</span>
-                        <span class="thmb-description fs-5 font-2">Service Description</span>
-                        <span class="thmb-action  font-2">$39.99</span>
-                    </div>
-                    <div class="col thmb-btn d-flex"><button class="btn btn-danger text-white font-2">Book</button></div>
-                </div>
-                <div class="col-12 col-sm-6 p-2 row m-0  thmb  ">
-                    <div class="col thmb-cover p-0"><img src="imgs/orema11.jpg" alt="" class="img-fluid"></div>
-                    <div class="w-auto flex-col justify-content-center thmb-text pl-2 text-white">
-                        <span class="fs-5 thmb-name font-3">Service #1</span>
-                        <span class="thmb-description fs-5 font-2">Service Description</span>
-                        <span class="thmb-action  font-2">$39.99</span>
-                    </div>
-                    <div class="col thmb-btn d-flex"><button class="btn btn-danger text-white font-2">Book</button></div>
-                </div>
+            <div id="services" class="thmbs mb-3 d-flex mt-1 p-3 justify-content-center">
+                
             </div>
         </div>
         <div id="collab" class="d-flex w-100  pt-5 pb-5 justify-content-center flex-col align-items-center position-relative ">
@@ -273,6 +226,7 @@
         <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js" integrity="sha256-9zljDKpE/mQxmaR4V2cGVaQ7arF3CcXxarvgr7Sj8Uc=" crossorigin="anonymous"></script>
         <script src="js/global.js"></script>
         <script src="js/booking.js"></script>
+        <script src="js/services.js"></script>
     </body>
 
     </html>
