@@ -14,6 +14,28 @@ div#formContainer {
     }
     
 }
+
+#collabCheckmark{
+    opacity: 0;
+    transition: opacity 1s ease;
+    i.fa-solid {
+    text-shadow: 1px -3px 10px var(--prim-color);
+    font-size: 5rem;
+    color: #000000;
+
+}
+}
+#collabForm{
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.moveLater {
+    transition: opacity 0.2s ease;
+}
+#collabContent {
+    min-height: 90%;
+    transition: min-height 1s ease;
+} 
 p.text-secondary.fs-6.m-0.fs-6.font-3.p-5.text-center.pt-2.mb-2.d-sm-block.pb-2 {
     color: #d0d0d0!important;
 }

@@ -68,23 +68,32 @@
                 </div>
             </nav>
         </div>
-        <div id="" class="d-flex w-100  pt-5 pb-5 justify-content-center flex-col align-items-center position-relative ">
-            <span class="fs-2 text-white font-1 p-1 d-sm-block">
+        <div id="collabContent" class="d-flex w-100  pt-5 pb-5 justify-content-center flex-col align-items-center position-relative ">
+            
+            <span class="fs-2 text-white font-1 p-1 d-sm-block moveLater">
                     Let’s Create Together
-                </span>
-               <p class="text-white fs-6 m-0 fs-6 font-3 p-5 text-center pt-2 mb-2 d-sm-block pb-2"> Share your vision, and let’s make something incredible.</p>
-            <form action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" class="col-12 col-sm-10 col-lg-8" method="POST">
+            </span>
+            <p class="text-white fs-6 m-0 fs-6 font-3 p-5 moveLater text-center pt-2 mb-2 d-sm-block pb-2"> Share your vision, and let’s make something incredible.</p>
+            <form id="collabForm" class="col-12 col-sm-10 col-lg-8" method="POST">
                 <div class="d-flex flex-col p-4 text-white col-12 " id="formContainer">
                     <label for="name" class="font-3 fs-7">Name *</label>
-                    <input type="text" name="entry.1234567890" required="">
+                    <input type="text" name="entry.1593303050" required="">
                     <label for="email" class="font-3 fs-7">Your Email</label>
-                    <input type="email" name="entry.9876543210">
+                    <input type="email" name="entry.681066851">
                     <label for="ideas" class="font-3 fs-7">Ideas / Extra Details *</label>
-                    <textarea rows="6" name="entry.5678901234" required=""></textarea>
+                    <textarea rows="6" name="entry.734222768" required=""></textarea>
                     <button class="font-3 btn btn-outline-danger btn-md mt-2 text-white" type="submit">Send Request</button>
                     
                 </div>
             </form>
+            <div id="collabCheckmark" class="d-flex w-100 pb-5 justify-content-center flex-col align-items-center position-relative ">
+
+                <i class="fa-solid fa-circle-check my-fs1 p-3"></i>
+                <span id="collabTitle" class="fs-2 text-white font-1 p-1 d-sm-block">   
+                </span>
+                <p id="collabSubtext" class="text-white fs-6 m-0 fs-6 font-3 p-5 text-center pt-2 mb-2 d-sm-block pb-2"> Share your vision, and let’s make something incredible.
+                </p>
+            </div>
         </div>
         <div class="marquee-2 d-flex row nowrap">
             <div class="divider w-100"></div>
@@ -104,6 +113,29 @@
                 </div>
             </div>
         </div>
+        <script>
+
+            document.getElementById("collabForm").addEventListener("submit", function(event) {
+              event.preventDefault(); // Stop normal form submission
+
+              let formData = new FormData(this); // Capture form data
+
+              fetch("https://docs.google.com/forms/u/1/d/e/1FAIpQLSe3MXaFitjMBqRC-VbiTvvuQy1buLFiVQO0b7bHKewIyO9-8g/formResponse", {
+                method: "POST",
+                body: formData,
+                mode: "no-cors" // Prevent CORS errors
+              }).then(() => {
+                $('#collabForm, .moveLater').css('opacity','0');
+                $('#collabForm, .moveLater').hide('blind', 600);
+            }).then(() => {
+                document.getElementById('collabTitle').innerText = "Request Sent";
+                document.getElementById('collabSubtext').innerText = "I look forward to working with you!";
+                
+              }).then(() => {
+                $('#collabCheckmark').css('opacity', '1');
+              }).catch(error => console.error("Error!", error));
+            });
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
