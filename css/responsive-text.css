@@ -7,36 +7,37 @@ div#navbarNavDropdown {
     box-shadow: 0px 11px 2px 0px transparent;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 767px){
     html {
         font-size: 1.2rem;
 
         .carousel .openingBox .my-fs1 {
-            font-size: 1.1rem;
+            font-size: 0.75em;
         }
 
         .carousel .openingBox .my-fs4 {
             font-size: 0.7rem;
         }
+
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
     html {
         font-size: 1.4rem;
     }
 
     .carousel .openingBox .my-fs1 {
-        font-size: 1.30rem;
+        font-size: 0.75rem;
     }
 
     .carousel .openingBox .my-fs4 {
-        font-size: 1rem;
+        font-size: 0.6rem;
     }
 
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199px){
     html {
         font-size: 1.4rem;
     }
@@ -44,6 +45,13 @@ div#navbarNavDropdown {
     div#navbarNavDropdown {
         background: transparent;
         box-shadow: 0px 0px transparent;
+    }
+    .carousel .openingBox .my-fs1 {
+        font-size: 1rem;
+    }
+
+    .carousel .openingBox .my-fs4 {
+        font-size: 1rem;
     }
 }
 
@@ -55,5 +63,12 @@ div#navbarNavDropdown {
     div#navbarNavDropdown {
         background: transparent;
         box-shadow: 0px 0px transparent;
+    }
+    .carousel .openingBox .my-fs1 {
+        font-size: 1.2rem;
+    }
+
+    .carousel .openingBox .my-fs4 {
+        font-size: 1rem;
     }
 }

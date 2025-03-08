@@ -133,7 +133,7 @@ img.p-1.img-fluid {
     padding-top: 0.37rem;
 }
 
-#overlay-gallery {
+.overlay-gallery {
     background: linear-gradient(0deg, black, transparent 36%);
     top: 3px;
     transition: background 1s ease-in-out !important;
