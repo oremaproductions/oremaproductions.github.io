@@ -16,6 +16,7 @@ html, body {
         --bs-modal-width: auto;
 
 }
+ 
 div#navbarNavDropdown ul {
     font-size: 0.7rem!important;
 }
@@ -79,10 +80,10 @@ nav.navbar {
 
 #icons i {
     /* background: rgba(0,0,0,0.5); */
-    padding: 0.4rem;
+    padding: 0.5rem;
     border-radius: 50%;
     /* color: red !important; */
-    /*border: 1px inset white;*/
+    border: 1px solid #a1a1a1;
 }
 
 img.p-1.img-fluid {

@@ -27,10 +27,10 @@ removeclass when:
 	- vw is >= 574 && .carousel-item's > 0 
 */
 const gallery_titles = {
-	'photoshoot' : {'cta-header':'Your Story, Captured','cta-subtext': 'Lock in your session today', 'cta-btn-text': 'Book Your Shoot','cta-btn-link':'index.html'},
-	'wedding' : {'cta-header':'Forever in Focus','cta-subtext': 'Reserve your wedding photography', 'cta-btn-text': 'Secure Your Date','cta-btn-link':'index.html'},
-	'studio' : {'cta-header':'Creativity Unleashed','cta-subtext': 'Let\'s bring your vision to life', 'cta-btn-text': 'Reserve Studio Time','cta-btn-link':'index.html'},
-	'graduation' : {'cta-header':'Celebrate the Milestone','cta-subtext': 'Make your graduation unforgettable', 'cta-btn-text': 'Book Your Session','cta-btn-link':'index.html'}
+	'photoshoot' : {'cta-header':'Your Story, Captured','cta-subtext': 'Lock in your session today', 'cta-btn-text': 'Book Your Shoot','cta-btn-link':'booking.html?service=service1'},
+	'wedding' : {'cta-header':'Forever in Focus','cta-subtext': 'Reserve your wedding photography', 'cta-btn-text': 'Secure Your Date','cta-btn-link':'booking.html?service=service4'},
+	'studio' : {'cta-header':'Creativity Unleashed','cta-subtext': 'Let\'s bring your vision to life', 'cta-btn-text': 'Reserve Studio Time','cta-btn-link':'booking.html?service=service2'},
+	'graduation' : {'cta-header':'Celebrate the Milestone','cta-subtext': 'Make your graduation unforgettable', 'cta-btn-text': 'Book Your Session','cta-btn-link':'booking.html?service=service3'}
 }
 //switch if valid gallery title even exists && if next gallery title != title 
 function __is_valid(title) { 

@@ -1,3 +1,3 @@
 function redirectTo(link,method) {
-	return (method == 'replace') ? window.location.replace(link) : window.open(link);
+	return (method == 'replace') ? window.location.href = link : window.open(link);
 }

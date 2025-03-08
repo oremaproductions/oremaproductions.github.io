@@ -1,37 +1,59 @@
 html {
-  font-size: 1rem;
+    font-size: 1rem;
+}
+
+div#navbarNavDropdown {
+    background: linear-gradient(360deg, #0000000d, #00000024, transparent);
+    box-shadow: 0px 11px 2px 0px transparent;
 }
 
 @media (min-width: 576px) {
-  html {
-    font-size: 1.2rem;
-    .carousel .openingBox .my-fs1 {
-      font-size: 1.1rem;
+    html {
+        font-size: 1.2rem;
+
+        .carousel .openingBox .my-fs1 {
+            font-size: 1.1rem;
+        }
+
+        .carousel .openingBox .my-fs4 {
+            font-size: 0.7rem;
+        }
     }
-    .carousel .openingBox .my-fs4 {
-        font-size: 0.7rem;
-    }
-  }
 }
+
 @media (min-width: 768px) {
-  html {
-    font-size: 1.4rem;
-  }
-  .carousel .openingBox .my-fs1 {
-      font-size: 1.30rem;
+    html {
+        font-size: 1.4rem;
     }
+
+    .carousel .openingBox .my-fs1 {
+        font-size: 1.30rem;
+    }
+
     .carousel .openingBox .my-fs4 {
         font-size: 1rem;
     }
 
 }
+
 @media (min-width: 992px) {
-  html {
-    font-size: 1.4rem;
-  }
+    html {
+        font-size: 1.4rem;
+    }
+
+    div#navbarNavDropdown {
+        background: transparent;
+        box-shadow: 0px 0px transparent;
+    }
 }
+
 @media (min-width: 1200px) {
-  html {
-    font-size: 1.7rem;
-  }
+    html {
+        font-size: 1.7rem;
+    }
+
+    div#navbarNavDropdown {
+        background: transparent;
+        box-shadow: 0px 0px transparent;
+    }
 }

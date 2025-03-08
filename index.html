@@ -41,25 +41,26 @@
                                     Book OP
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="booking.html?service=service1">Hourly</a></li>
-                                    <li><a class="dropdown-item" href="#">Premium</a></li>
-                                    <li><a class="dropdown-item" href="#">Packages</a></li>
+                                    <li><a class="dropdown-item" href="booking.html?service=service1">Photoshoot</a></li>
+                                    <li><a class="dropdown-item" href="booking.html?service=service2">Studio</a></li>
+                                    <li><a class="dropdown-item" href="booking.html?service=service3">Grad Photos</a></li>
+                                    <li><a class="dropdown-item" href="booking.html?service=service4">Weddings</a></li>
                                 </ul>
                             </li> 
                             <li class="nav-item">
                                 <a class="nav-link" href="collabs.html">Collabs</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Warehouse</a>
+                                <a class="nav-link" href="warehouse.html">Warehouse</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
+                                <a class="nav-link" href="about.html">About</a>
                             </li>
                         </ul>
-                        <div class="d-flex align-items-center gap-3 " id="icons">
-                            <i class="fa-brands fa-instagram text-white"></i>
-                            <i class="fa-regular fa-envelope text-white"></i>
-                            <i class="fa-solid fa-phone text-white"></i>
+                        <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0" id="icons">
+                            <i onclick="redirectTo('https://www.instagram.com/0orema/')" class="fa-brands fa-instagram text-white"></i>
+                            <i onclick="redirectTo('#')" class="fa-regular fa-envelope text-white"></i>
+                            <i onclick="redirectTo('#')" class="fa-solid fa-phone text-white"></i>
                         </div>
                     </div>
                 </div>
@@ -82,7 +83,7 @@
       <h1 class="fs-1 ">Orema Productions </h1>
       <button class="btn btn-primary">Book Orema</button>
     </div> -->
-            <div id="box" class="p-4 text-white position-absolute openingBox" data-target="gallery.html" onclick="redirectTo(this.dataset.target)">
+            <div id="box" class="p-4 text-white position-absolute openingBox" data-target="gallery.html" onclick="redirectTo(this.dataset.target,'replace')">
                 <h1 class="my-fs1 m-0 font-1" id="openingHeader">See My Vision</h1>
                 <div class="my-fs4 dim d-flex gap-2">
                     <span id="openingSubtext" class="font-2">View Gallery</span>
@@ -92,44 +93,28 @@
         </div>
         <div class="container-fluid bg-dark p-0 pt-2 pb-2">
             <div class="thmbs mb-3 d-flex mt-4 p-3 justify-content-center">
-                <div class="col-12 col-sm-6 p-2 row m-0  thmb  ">
-                    <div class="col thmb-cover p-0"><img src="imgs/orema11.jpg" alt="" class="img-fluid"></div>
-                    <div class="w-auto flex-col justify-content-center thmb-text pl-2 text-white">
-                        <span class="fs-5 thmb-name font-3">Service #1</span>
-                        <span class="thmb-description fs-5 font-2">Service Description</span>
-                        <span class="thmb-action  font-2">$39.99</span>
-                    </div>
-                    <div class="col thmb-btn d-flex"><button class="btn btn-danger text-white font-2">Book</button></div>
+                <div class="col-12 col-sm-6 p-2 row m-0 row-cols-3 thmb">
+                    <div class="col-4 thmb-cover p-0"><img class="img-fluid" src="imgs/orema16.jpg"></div>
+                    <div class="col-5 p-0 flex-col justify-content-center thmb-text pl-2 text-white"><span class="fs-5 thmb-name font-3">Photoshoot</span><span class="thmb-description fs-5 font-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ligula nec justo scelerisque feugiat. Proin quis augue at justo vulputate scelerisque. Aenean sit amet felis nec lorem hendrerit dictum. Integer non diam ac quam gravida cursus. Ut non risus vel felis dapibus fermentum eget ac lorem.</span><span class="thmb-action font-2">$120 / hr</span></div>
+                    <div class="col-3 thmb-btn d-flex"><button class="btn btn-danger text-white font-2" onclick="redirectTo('./booking.html?service=service5','replace')">Book</button></div>
                 </div>
-                <div class="col-12 col-sm-6 p-2 row m-0  thmb ">
-                    <div class="col thmb-cover p-0"><img src="imgs/orema12.jpg" alt="" class="img-fluid"></div>
-                    <div class="w-auto flex-col justify-content-center thmb-text pl-2 text-white">
-                        <span class="fs-5 thmb-name font-3">Service #2</span>
-                        <span class="thmb-description fs-5 font-2">Service Description</span>
-                        <span class="thmb-action  font-2">$39.99</span>
-                    </div>
-                    <div class="col thmb-btn d-flex"><button class="btn btn-danger text-white font-2">Book</button></div>
+                <div class="col-12 col-sm-6 p-2 row m-0 row-cols-3 thmb">
+                    <div class="col-4 thmb-cover p-0"><img class="img-fluid" src="imgs/orema11.jpg"></div>
+                    <div class="col-5 p-0 flex-col justify-content-center thmb-text pl-2 text-white"><span class="fs-5 thmb-name font-3">Photoshoot</span><span class="thmb-description fs-5 font-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ligula nec justo scelerisque feugiat. Proin quis augue at justo vulputate scelerisque. Aenean sit amet felis nec lorem hendrerit dictum. Integer non diam ac quam gravida cursus. Ut non risus vel felis dapibus fermentum eget ac lorem.</span><span class="thmb-action font-2">$120 / hr</span></div>
+                    <div class="col-3 thmb-btn d-flex"><button class="btn btn-danger text-white font-2" onclick="redirectTo('./booking.html?service=service1','replace')">Book</button></div>
                 </div>
-                <div class="col-12 col-sm-6 p-2 row m-0  thmb ">
-                    <div class="col thmb-cover p-0"><img src="imgs/orema13.jpg" alt="" class="img-fluid"></div>
-                    <div class="w-auto flex-col justify-content-center thmb-text pl-2 text-white">
-                        <span class="fs-5 thmb-name font-3">Service #3</span>
-                        <span class="thmb-description fs-5 font-2">Service Description</span>
-                        <span class="thmb-action font-2">$39.99</span>
-                    </div>
-                    <div class="col thmb-btn d-flex"><button class="btn btn-danger text-white font-2">Book</button></div>
+                <div class="col-12 col-sm-6 p-2 row m-0 row-cols-3 thmb">
+                    <div class="col-4 thmb-cover p-0"><img class="img-fluid" src="imgs/orema13.jpg"></div>
+                    <div class="col-5 p-0 flex-col justify-content-center thmb-text pl-2 text-white"><span class="fs-5 thmb-name font-3">Studio</span><span class="thmb-description fs-5 font-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ligula nec justo scelerisque feugiat. Proin quis augue at justo vulputate scelerisque. Aenean sit amet felis nec lorem hendrerit dictum. Integer non diam ac quam gravida cursus. Ut non risus vel felis dapibus fermentum eget ac lorem.</span><span class="thmb-action font-2">$200 / hr</span></div>
+                    <div class="col-3 thmb-btn d-flex"><button class="btn btn-danger text-white font-2" onclick="redirectTo('./booking.html?service=service2','replace')">Book</button></div>
                 </div>
-                <div class="col-12 col-sm-6 p-2 row m-0  thmb ">
-                    <div class="col thmb-cover p-0"><img src="imgs/orema13.jpg" alt="" class="img-fluid"></div>
-                    <div class="w-auto flex-col justify-content-center thmb-text pl-2 text-white">
-                        <span class="fs-5 thmb-name font-3">Service #3</span>
-                        <span class="thmb-description fs-5 font-2">Service Description</span>
-                        <span class="thmb-action font-2">$39.99</span>
-                    </div>
-                    <div class="col thmb-btn d-flex"><button class="btn btn-danger text-white font-2">Book</button></div>
+                <div class="col-12 col-sm-6 p-2 row m-0 row-cols-3 thmb">
+                    <div class="col-4 thmb-cover p-0"><img class="img-fluid" src="imgs/orema9.jpg"></div>
+                    <div class="col-5 p-0 flex-col justify-content-center thmb-text pl-2 text-white"><span class="fs-5 thmb-name font-3">Grad Photos</span><span class="thmb-description fs-5 font-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ligula nec justo scelerisque feugiat. Proin quis augue at justo vulputate scelerisque. Aenean sit amet felis nec lorem hendrerit dictum. Integer non diam ac quam gravida cursus. Ut non risus vel felis dapibus fermentum eget ac lorem.</span><span class="thmb-action font-2">$70 / hr</span></div>
+                    <div class="col-3 thmb-btn d-flex"><button class="btn btn-danger text-white font-2" onclick="redirectTo('./booking.html?service=service3','replace')">Book</button></div>
                 </div>
                 <div class="col-12 p-4 pb-0 pt-0 row m-0 thmb  d-flex nowrap justify-content-end  align-items-sm-center">
-                    <a href="#" class="footerLink text-white font-2 fs-7 w-auto p-0">See All Services</a>
+                    <a href="booking.html?service=allServices" class="footerLink text-white font-2 fs-7 w-auto p-0">See All Services</a>
                     <i class="primary-icon  pt-1 fa-solid fa-arrow-right w-auto"></i>
                 </div>
                 
@@ -138,34 +123,23 @@
         <div id="collab" class="d-flex w-100  pt-3 pb-4 justify-content-center flex-col align-items-center">
             <span class="fs-1 font-1">Your Vision, My Lens</span>
             <span class="my-fs4 subtext font-2">Let's capture something unique together.</span>
-            <button class="id btn-md btn btn-light  font-2 mt-4 p-2" id="collab-btn">Let's Collab</button>
+            <button class="id btn-md btn btn-light  font-2 mt-4 p-2" onclick="redirectTo('collabs.html','replace')" id="collab-btn">Let's Collab</button>
         </div>
         <div class="marquee-2 d-flex row nowrap">
             <div class="divider w-100"></div>
             <div class="divider w-100"></div>
         </div>
         <div class="container-fluid">
-            <div class="d-flex row row-cols-2 col w-100 p-4 m-auto justify-content-around">
+            <div class="d-flex row row-cols-2 col w-100 p-4 m-auto font-3 justify-content-around">
                 <div class="col d-flex flex-col wrap p-0 fs-7 w-auto">
                     <a href="#" class="footerLink active">Home</a>
                     <a href="gallery.html" class="footerLink">Gallery</a>
                     <a href="booking.html" class="footerLink">Book Orema</a>
+                </div>
+                <div class="col d-flex flex-col wrap p-0 fs-7 w-auto">
+                    <a href="about.html" class="footerLink">About</a>
                     <a href="collabs.html" class="footerLink">Collaborate</a>
-                    <a href="index.html" class="footerLink">About</a>
-                </div>
-                <div class="col d-flex flex-col wrap p-0 fs-7 w-auto opacity-0">
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                </div>
-                <div class="col d-flex flex-col wrap p-0 fs-7 w-auto opacity-0">
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                    <a href="index.html" class="footerLink">Let's Collab</a>
+                    <a href="warehouse.html" class="footerLink">The Warehouse</a>
                 </div>
             </div>
         </div>

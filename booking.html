@@ -104,25 +104,26 @@
                                     Book OP
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="booking.html?service=service1">Hourly</a></li>
-                                    <li><a class="dropdown-item" href="#">Premium</a></li>
-                                    <li><a class="dropdown-item" href="#">Packages</a></li>
+                                    <li><a class="dropdown-item" href="booking.html?service=service1">Photoshoot</a></li>
+                                    <li><a class="dropdown-item" href="booking.html?service=service2">Studio</a></li>
+                                    <li><a class="dropdown-item" href="booking.html?service=service3">Grad Photos</a></li>
+                                    <li><a class="dropdown-item" href="booking.html?service=service4">Weddings</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="collabs.html">Collabs</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Warehouse</a>
+                                <a class="nav-link" href="warehouse.html">Warehouse</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
+                                <a class="nav-link" href="about.html">About</a>
                             </li>
                         </ul>
-                        <div class="d-flex align-items-center gap-3 " id="icons">
-                            <i class="fa-brands fa-instagram text-white"></i>
-                            <i class="fa-regular fa-envelope text-white"></i>
-                            <i class="fa-solid fa-phone text-white"></i>
+                        <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0" id="icons">
+                            <i onclick="redirectTo('https://www.instagram.com/0orema/')" class="fa-brands fa-instagram text-white"></i>
+                            <i onclick="redirectTo('#')" class="fa-regular fa-envelope text-white"></i>
+                            <i onclick="redirectTo('#')" class="fa-solid fa-phone text-white"></i>
                         </div>
                     </div>
                 </div>
@@ -185,9 +186,9 @@
             </div>
         </div>
         <div id="collab" class="d-flex w-100  pt-5 pb-5 justify-content-center flex-col align-items-center position-relative ">
-            <span class="fs-1 font-1" id='gal-cta-header'>Your Story, Captured</span>
-            <span class="my-fs4 subtext font-2" id='gal-cta-subtext'>Lock in your session today</span>
-            <button class="id btn-md btn btn-light  font-2 mt-4 p-2" id="gal-cta-btn" onclick="redirectTo(this.dataset.target,'replace')" target="index.html">Book Your Shoot</button>
+            <span class="fs-1 font-1" id='gal-cta-header'>See My Vision</span>
+            <span class="my-fs4 subtext font-2" id='gal-cta-subtext'>Let's bring your vision to life</span>
+            <button class="id btn-md btn btn-light  font-2 mt-4 p-2" id="gal-cta-btn" onclick="redirectTo(this.dataset.target,'replace')" data-target="gallery.html">See Gallery</button>
         </div>
         <div class="marquee-2 d-flex row nowrap">
             <div class="divider w-100"></div>
@@ -199,22 +200,11 @@
                     <a href="index.html" class="footerLink">Home</a>
                     <a href="gallery.html" class="footerLink ">Gallery</a>
                     <a href="#" class="footerLink active">Book Orema</a>
+                </div>
+                <div class="col d-flex flex-col wrap p-0 fs-7 w-auto">
+                    <a href="about.html" class="footerLink">About</a>
                     <a href="collabs.html" class="footerLink">Collaborate</a>
-                    <a href="index.html" class="footerLink">About</a>
-                </div>
-                <div class="col d-flex flex-col wrap p-0 fs-7 w-auto opacity-0">
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                </div>
-                <div class="col d-flex flex-col wrap p-0 fs-7 w-auto opacity-0">
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                    <a href="index.html" class="footerLink">Let's Collab</a>
-                    <a href="index.html" class="footerLink">Let's Collab</a>
+                    <a href="warehouse.html" class="footerLink">The Warehouse</a>
                 </div>
             </div>
         </div>
