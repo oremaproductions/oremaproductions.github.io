@@ -74,7 +74,7 @@
                     Let’s Create Together
             </span>
             <p class="text-white fs-6 m-0 fs-6 font-3 p-5 moveLater text-center pt-2 mb-2 d-sm-block pb-2"> Share your vision, and let’s make something incredible.</p>
-            <form id="collabForm" class="col-12 col-sm-10 col-lg-8" method="POST">
+            <form id="form" class="col-12 col-sm-10 col-lg-8" method="POST">
                 <div class="d-flex flex-col p-4 text-white col-12 " id="formContainer">
                     <label for="name" class="font-3 fs-7">Name *</label>
                     <input type="text" name="entry.1593303050" required="">
@@ -86,12 +86,12 @@
                     
                 </div>
             </form>
-            <div id="collabCheckmark" class="d-flex w-100 pb-5 justify-content-center flex-col align-items-center position-relative ">
+            <div id="formCheckmark" class="d-flex w-100 pb-5 justify-content-center flex-col align-items-center position-relative ">
 
                 <i class="fa-solid fa-circle-check my-fs1 p-3"></i>
-                <span id="collabTitle" class="fs-2 text-white font-1 p-1 d-sm-block">   
+                <span id="formTitle" class="fs-2 text-white font-1 p-1 d-sm-block">   
                 </span>
-                <p id="collabSubtext" class="text-white fs-6 m-0 fs-6 font-3 p-5 text-center pt-2 mb-2 d-sm-block pb-2"> Share your vision, and let’s make something incredible.
+                <p id="formSubtext" class="text-white fs-6 m-0 fs-6 font-3 p-5 text-center pt-2 mb-2 d-sm-block pb-2"> Share your vision, and let’s make something incredible.
                 </p>
             </div>
         </div>
@@ -113,32 +113,10 @@
                 </div>
             </div>
         </div>
-        <script>
-
-            document.getElementById("collabForm").addEventListener("submit", function(event) {
-              event.preventDefault(); // Stop normal form submission
-
-              let formData = new FormData(this); // Capture form data
-
-              fetch("https://docs.google.com/forms/u/1/d/e/1FAIpQLSe3MXaFitjMBqRC-VbiTvvuQy1buLFiVQO0b7bHKewIyO9-8g/formResponse", {
-                method: "POST",
-                body: formData,
-                mode: "no-cors" // Prevent CORS errors
-              }).then(() => {
-                $('#collabForm, .moveLater').css('opacity','0');
-                $('#collabForm, .moveLater').hide('blind', 600);
-            }).then(() => {
-                document.getElementById('collabTitle').innerText = "Request Sent";
-                document.getElementById('collabSubtext').innerText = "I look forward to working with you!";
-                
-              }).then(() => {
-                $('#collabCheckmark').css('opacity', '1');
-              }).catch(error => console.error("Error!", error));
-            });
-        </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="js/forms.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js" integrity="sha256-9zljDKpE/mQxmaR4V2cGVaQ7arF3CcXxarvgr7Sj8Uc=" crossorigin="anonymous"></script>

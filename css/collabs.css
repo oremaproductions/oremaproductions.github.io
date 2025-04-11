@@ -15,7 +15,7 @@ div#formContainer {
     
 }
 
-#collabCheckmark{
+#formCheckmark{
     opacity: 0;
     transition: opacity 1s ease;
     i.fa-solid {
@@ -25,7 +25,7 @@ div#formContainer {
 
 }
 }
-#collabForm{
+#form{
     opacity: 1;
     transition: opacity 0.3s ease;
 }

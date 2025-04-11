@@ -68,21 +68,29 @@
                 </div>
             </nav>
         </div>
-        <div id="" class="d-flex w-100  pt-5 pb-5 justify-content-center flex-col align-items-center position-relative ">
-            <span class="fs-2 text-white font-1 p-1 d-sm-block">
+        <div id="collabContent" class="d-flex w-100  pt-5 pb-5 justify-content-center flex-col align-items-center position-relative ">
+            <span class="fs-2 text-white font-1 p-1 d-sm-block moveLater">
                     WAREhouse
                 </span>
-               <p class="text-white fs-6 m-0 fs-6 font-3 p-5 text-center pt-2 mb-2 d-sm-block pb-2"> Join the WAREhouse </p>
-            <form action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" class="col-12 col-sm-10 col-lg-8" method="POST">
+               <p class="text-white fs-6 m-0 fs-6 font-3 p-5 text-center pt-2 mb-2 d-sm-block pb-2 moveLater"> Join the WAREhouse </p>
+            <form id="form" class="col-12 col-sm-10 col-lg-8" method="POST">
                 <div class="d-flex flex-col p-4 text-white col-12 " id="formContainer">
                     <label for="name" class="font-3 fs-7">Name *</label>
-                    <input type="text" name="entry.1234567890" required="">
-                    <label for="email" class="font-3 fs-7">Your Email</label>
-                    <input type="email" name="entry.9876543210">  
+                    <input type="text" name="entry.1844413193" required="">
+                    <label for="email" class="font-3 fs-7">Email</label>
+                    <input type="email" name="entry.1759665320">  
                     <button class="font-3 btn btn-outline-danger btn-md mt-2 text-white" type="submit">Apply Now </button>
                     
                 </div>
             </form>
+            <div id="formCheckmark" class="d-flex w-100 pb-5 justify-content-center flex-col align-items-center position-relative ">
+
+                <i class="fa-solid fa-circle-check my-fs1 p-3"></i>
+                <span id="formTitle" class="fs-2 text-white font-1 p-1 d-sm-block">   
+                </span>
+                <p id="formSubtext" class="text-white fs-6 m-0 fs-6 font-3 p-5 text-center pt-2 mb-2 d-sm-block pb-2">
+                </p>
+            </div>
         </div>
         <div class="marquee-2 d-flex row nowrap">
             <div class="divider w-100"></div>
@@ -106,6 +114,7 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="js/forms.js"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js" integrity="sha256-9zljDKpE/mQxmaR4V2cGVaQ7arF3CcXxarvgr7Sj8Uc=" crossorigin="anonymous"></script>
         <script src="js/global.js"></script> 
