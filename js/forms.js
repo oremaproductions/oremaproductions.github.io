@@ -25,6 +25,7 @@ function handleForm(page) {
             $('#form, .moveLater').css('opacity', '0');
             $('#form, .moveLater').hide('blind', 600);
         }).then(() => {
+            $('#form, .moveLater').css('display', 'none!important');
             document.getElementById('formTitle').innerText = pageURLs[page]['formTitle'];
             document.getElementById('formSubtext').innerText = pageURLs[page]['formSubtext'];
 

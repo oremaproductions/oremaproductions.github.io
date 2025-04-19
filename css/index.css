@@ -170,7 +170,9 @@ img.p-1.img-fluid {
 .fs-7 {
     font-size: 0.84rem;
 }
-
+.text-offwhite{ 
+    color: #dbdbdb !important;
+ }
 #group2 {
     transform: translateX(300%);
     animation: scrolling2 50s linear infinite;

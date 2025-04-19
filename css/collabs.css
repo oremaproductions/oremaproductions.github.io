@@ -1,4 +1,5 @@
-div#formContainer {
+form {
+
     label{
         color: #939393;
         padding-bottom: 0.5rem;
@@ -7,10 +8,13 @@ div#formContainer {
         margin-bottom: 1.5rem;
         padding: 0.5rem;
         color:white;
-        font-size: 1.25rem;
+        font-size: 1rem;
         background: #100f0f;
         border:none;
     /* border-bottom:1px solid white; */
+    }
+    input::placeholder {
+    color: #2d2c2c;
     }
     
 }
