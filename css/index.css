@@ -2,31 +2,42 @@ body {
     --prim-color: #ab000c;
     background: black;
 }
-html, body {
+
+html,
+body {
     margin: 0;
     height: 100vh;
 }
-.max-vh-100{
-    max-height:100vh!important;
+
+.max-vh-100 {
+    max-height: 100vh !important;
 }
-.max-vh-50{
-    max-height:50vh!important;
+
+.max-vh-50 {
+    max-height: 50vh !important;
 }
+
 .modal {
-        --bs-modal-width: auto;
+    --bs-modal-width: auto;
+    .modal-content { 
+        border: 1px solid #272727  !important;
+        box-shadow: 0px 0px 135px black !important;
+    }
 
 }
- 
+
 div#navbarNavDropdown ul {
-    font-size: 0.7rem!important;
+    font-size: 0.7rem !important;
 }
 
 .pl-2 {
-    padding-left:1.25rem!important;
+    padding-left: 1.25rem !important;
 }
+
 .pos-c-b {
-    background-position:center bottom !important;
+    background-position: center bottom !important;
 }
+
 .btn-outline-danger {
     --bs-btn-color: var(--prim-color);
     --bs-btn-border-color: var(--prim-color);
@@ -92,7 +103,7 @@ img.p-1.img-fluid {
 }
 
 #displayBkg {
-    clip-path: border-box; 
+    clip-path: border-box;
     background: black;
 }
 
@@ -178,16 +189,18 @@ div.openingBox {
 div.openingBox:hover {
     cursor: pointer;
 
-    
+
 }
+
 .dim {
     opacity: 0.7;
     transition: opacity 0.7s ease;
 }
+
 .dim:hover {
-    cursor:pointer;
+    cursor: pointer;
     opacity: 1;
-    }
+}
 
 /*bold headers
 */
@@ -246,35 +259,39 @@ div.openingBox:hover {
 .my-fs4 {
     font-size: 1.3rem;
 }
-#svg885 >path {
-    fill:var(--prim-color) !important;
+
+#svg885>path {
+    fill: var(--prim-color) !important;
 }
 
 .thmbs {
     flex-wrap: wrap;
-    
-    .thmb > div:nth-child(1) {
+
+    .thmb>div:nth-child(1) {
         img {
-        border-radius: 10px 0 0 10px;
+            border-radius: 10px 0 0 10px;
         }
     }
-    .thmb > div:nth-child(2) {
+
+    .thmb>div:nth-child(2) {
         background: #121212;
     }
-    .thmb > div:nth-child(3) {
-        background:#121212;
-        border-radius:0px 10px 10px 0;
+
+    .thmb>div:nth-child(3) {
+        background: #121212;
+        border-radius: 0px 10px 10px 0;
     }
+
     .thmb-name {
         font-weight: bold;
     }
 
-    span.thmb-description{
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-    
+    span.thmb-description {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
 
     .thmb-text {
         display: flex;
@@ -321,34 +338,42 @@ div.openingBox:hover {
     object-fit: cover;
     object-position: center 30%;
 }
+
 .divider {
     max-height: 3rem;
     height: 2.5rem;
     background: url('../components/photoreelDivider.png');
     background-size: contain;
 }
-.marquee-2 { 
+
+.marquee-2 {
     overflow: hidden;
     width: 100%;
     margin: 0;
+
     >* {
         flex: 0 0 100%;
     }
+
     >div.divider {
         animation: scrolling3 15s linear infinite;
     }
 }
+
 .footerLink {
     text-decoration: none;
-    color:white;
+    color: white;
     opacity: 0.6;
     line-height: 2rem;
     transition: opacity 0.3s linear;
 }
-.footerLink:hover, .footerLink.active {
+
+.footerLink:hover,
+.footerLink.active {
     text-decoration: none;
     opacity: 1;
 }
+
 @keyframes scrolling3 {
     0% {
         transform: translateX(0);
@@ -358,6 +383,7 @@ div.openingBox:hover {
         transform: translateX(-100%);
     }
 }
+
 @keyframes scrolling {
     0% {
         transform: translateX(0);

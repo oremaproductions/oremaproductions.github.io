@@ -90,13 +90,6 @@ function handleCheck(status) {
     return (status == true) ? $("#nextStep").removeClass("disabled") : $("#nextStep").addClass("disabled");
 }
 
-
-function handlePolicies(e) {
-    console.log('policies');
-    e.preventDefault();
-    $('#exampleModalLong').modal('show');
-}
-
 function updateTimeSlots(selectedDate) {
     console.log(selectedDate);
     let timeBtns = document.getElementById("time-slot-btns");
