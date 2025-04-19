@@ -82,13 +82,14 @@ function formattedTime(time) {
     return hour + ":" + splitData[1] + " " + splitData[2];
 }
 
-function handleCheck(status) {
 
+function handleCheck(status) {
     console.log(status)
 
     //if status == true, udisable btn.  else, disable
     return (status == true) ? $("#nextStep").removeClass("disabled") : $("#nextStep").addClass("disabled");
 }
+
 
 function handlePolicies(e) {
     console.log('policies');
