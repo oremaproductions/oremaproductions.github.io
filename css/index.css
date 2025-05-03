@@ -164,7 +164,7 @@ img.p-1.img-fluid {
 }
 
 .fs-5 {
-    font-size: 1.17rem !important;
+    font-size: 1.07rem !important;
 }
 
 .fs-7 {
@@ -286,11 +286,15 @@ div.openingBox:hover {
 
     .thmb-name {
         font-weight: bold;
+        font-size: 0.9rem!important;
     }
 
     span.thmb-description {
         overflow: hidden;
-        white-space: nowrap;
+        display: -webkit-box;
+        /* white-space: nowrap; */
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
         text-overflow: ellipsis;
     }
 
@@ -375,7 +379,10 @@ div.openingBox:hover {
     text-decoration: none;
     opacity: 1;
 }
-
+i.rounded-circle.btn.btn-outline-danger.p-1.fa-solid.fa-info {
+    width: 2rem;
+    height: 2rem;
+}
 @keyframes scrolling3 {
     0% {
         transform: translateX(0);
