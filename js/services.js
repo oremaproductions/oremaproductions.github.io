@@ -1,56 +1,58 @@
 let params = new URLSearchParams(document.location.search);
 let service_id = params.get('service');
+const description_delimeter = '•';
 const services = {
 	'basic' : {
 		'cover_img' : 'imgs/orema11.jpg',
-		'description' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ligula nec justo scelerisque feugiat. Proin quis augue at justo vulputate scelerisque. Aenean sit amet felis nec lorem hendrerit dictum. Integer non diam ac quam gravida cursus. Ut non risus vel felis dapibus fermentum eget ac lorem.',
+		'description' : 'All raw images in 1–24 hrs • 5 edits • 24–72 hr turnaround • 1 person max',
 		'title' : 'Basic Package',
 		'price' : '$100 / 30 minutes',
 		'payment_link' : ''
 	}, 
 	'premium' : {
 		'cover_img' : 'imgs/orema13.jpg',
-		'description' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ligula nec justo scelerisque feugiat. Proin quis augue at justo vulputate scelerisque. Aenean sit amet felis nec lorem hendrerit dictum. Integer non diam ac quam gravida cursus. Ut non risus vel felis dapibus fermentum eget ac lorem.',
+		'description' : 'All raw images in 1–24 hrs • 7 edits + Stop Motion • 24–72 hr turnaround • 2 people max',
 		'title' : 'Premium Package',
 		'price' : '$150 / 45 minutes',
 		'payment_link' : ''
 	}, 
 	'silver' : {
 		'cover_img' : 'imgs/orema9.jpg',
-		'description' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ligula nec justo scelerisque feugiat. Proin quis augue at justo vulputate scelerisque. Aenean sit amet felis nec lorem hendrerit dictum. Integer non diam ac quam gravida cursus. Ut non risus vel felis dapibus fermentum eget ac lorem.',
+		'description' : 'All raw images in 48 hrs • 10 edits • 3–7 day turnaround • 2 people max',
 		'title' : 'Silver Package',
 		'price' : '$250 / hr',
 		'payment_link' : ''
 	}, 
 	'gold' : {
 		'cover_img' : 'imgs/orema3.jpg',
-		'description' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ligula nec justo scelerisque feugiat. Proin quis augue at justo vulputate scelerisque. Aenean sit amet felis nec lorem hendrerit dictum. Integer non diam ac quam gravida cursus. Ut non risus vel felis dapibus fermentum eget ac lorem.',
+		'description' : 'All raw images in 48 hrs • 15 edits • 7–10 day turnaround • 3 people max',
 		'title' : 'Gold Package',
 		'price' : '$350 / 2 hrs',
 		'payment_link' : ''
 	}, 
 	'events' : {
 		'cover_img' : 'imgs/orema19.jpg',
-		'description' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ligula nec justo scelerisque feugiat. Proin quis augue at justo vulputate scelerisque. Aenean sit amet felis nec lorem hendrerit dictum. Integer non diam ac quam gravida cursus. Ut non risus vel felis dapibus fermentum eget ac lorem.',
+		'description' : 'All raw images in 5–7 business days • Light retouching, no edits • 2 hr min',
 		'title' : 'Events',
 		'price' : '$75 / hr',
 		'payment_link' : ''
 	},
 	'graduations' : {
 		'cover_img' : 'imgs/orema3.jpg',
-		'description' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ligula nec justo scelerisque feugiat. Proin quis augue at justo vulputate scelerisque. Aenean sit amet felis nec lorem hendrerit dictum. Integer non diam ac quam gravida cursus. Ut non risus vel felis dapibus fermentum eget ac lorem.',
+		'description' : 'All raw images in 48 hrs • 10 edits • 3–7 day turnaround • 1 person max',
 		'title' : 'Graduation (Basic)',
-		'price' : '$250 / 2 hrs',
+		'price' : '$150 / 1 hr',
 		'payment_link' : ''
 	},
 	'graduations2' : {
 		'cover_img' : 'imgs/orema6.jpg',
-		'description' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ligula nec justo scelerisque feugiat. Proin quis augue at justo vulputate scelerisque. Aenean sit amet felis nec lorem hendrerit dictum. Integer non diam ac quam gravida cursus. Ut non risus vel felis dapibus fermentum eget ac lorem.',
-		'title' : 'Graduation (Gold',
+		'description' : 'All raw images in 48 hrs • 15 edits • 7–10 day turnaround • 2 people max',
+		'title' : 'Graduation (Gold)',
 		'price' : '$250 / 2 hrs',
 		'payment_link' : ''
 	}
 }
+
 
 
 // return true  services DB has a key by the name of service_id
@@ -65,12 +67,20 @@ function get_service_data(service_id) {
 
 function update_service(service_id) {
 	let service = get_service_data(service_id);
+	let $description_ele = $('#service_description');
+	let $ul_ele = $("<ul>", {class: "m-0 description_list"});
 	document.querySelector('#coverImg').setAttribute('src', service['cover_img']);
-	document.querySelector('#service_description').innerText = service['description'];
 	document.querySelector('#service').value = service['title'];
 	document.querySelectorAll('span[name=service_title]').forEach((ele, index) => { ele.innerText = service['title']});
 	document.querySelectorAll('p[name=service_price]').forEach((ele, index) => { ele.innerText = service['price']});
 	
+	for(var x = 0; x< service['description'].split(description_delimeter).length; x++) {
+		let $li = $("<li>", {class: "m-0 font-3 fs-6 my-1 "});
+		$li.html(service['description'].split(description_delimeter)[x]);
+		$ul_ele.append($li);
+		
+	}
+	$description_ele.append($ul_ele);
 	let active_service_id = (is_valid_service(service_id)) ? service_id: "studio";
 	populate_other_services(active_service_id); 
 	return true;
@@ -82,22 +92,25 @@ function populate_other_services(active_service_id, limit=Object.keys(services).
 	for (var i = 0; i < limit ; i++){
 		if(Object.keys(services)[i] != active_service_id){
 			let service = services[Object.keys(services)[i]];
-			let $div = $("<div>", {class: "col-12 col-sm-6 p-2 row m-0 row-cols-3 thmb"});
+			let $div = $("<div>", {class: "show-on-scroll col-12 col-lg-6 p-2 row m-0 my-1 row-cols-3 thmb"});
 			let $div2 = $("<div>", {class: "col-4 thmb-cover p-0"});
-			let $div3 = $("<div>", {class: "col-5 p-0 flex-col justify-content-center thmb-text pl-2 text-white"});
+			let $div3 = $("<div>", {class: " col-5 p-0 flex-col justify-content-center thmb-text pl-2 text-white"});
+			let $div5 = $("<div>", {class: "  thmb-description text-white"});
 			let $div4 = $("<div>", {class: "col-3 thmb-btn d-flex"});
 			let $span = $("<span>", {class: "fs-5 thmb-name font-3"});
-			$span.html(service['title']);
-			let $span2 = $("<span>", {class: "thmb-description fs-6 my-2 font-2"});
-			$span2.html(service['description']);
-			let $span3 = $("<span>", {class: "thmb-action font-2"});
-			$span3.html(service['price']);
+			let $span2 = $("<span>", {class: " "});
+			let $span3 = $("<span>", {class: "thmb-action font-2 fs-7"});
 			let $img = $("<img>", {class: "img-fluid", src: service['cover_img']});
 			let $button = $("<button>", {class: "btn btn-danger text-white font-2", onclick: 'redirectTo("./booking.html?service=' + Object.keys(services)[i] + '","replace")'});
+			$span.html(service['title']);
+			$span3.html(service['price']);
 			$button.html('Book');
 			$div3.append($span);
-			$div3.append($span2);
+			let $p = $("<p>", {class: "m-0 font-2 fs-6 my-1 "});
+			$p.html(service['description']);
+			$div5.append($p);
 			$div3.append($span3);
+			$div3.append($div5);
 			$div2.append($img);
 			$div4.append($button);
 			$div.append($div2);

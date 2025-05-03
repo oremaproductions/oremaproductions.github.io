@@ -261,11 +261,26 @@ div.openingBox:hover {
 .my-fs4 {
     font-size: 1.3rem;
 }
-
+.flatpickr-calendar.arrowTop:after, .flatpickr-calendar.arrowTop:before {
+    display: none;
+}
+.show-on-scroll {
+    opacity: 0 ;
+    will-change: opacity;
+    transition:opacity 1.3s ease-in ;
+}
 #svg885>path {
     fill: var(--prim-color) !important;
 }
 
+
+    ul.description_list{
+        list-style-type: circle;
+        list-style-position: inside;
+        ::marker {
+            color: var(--prim-color);
+        }
+    }
 .thmbs {
     flex-wrap: wrap;
 
@@ -289,7 +304,7 @@ div.openingBox:hover {
         font-size: 0.9rem!important;
     }
 
-    span.thmb-description {
+    .thmb-description {
         overflow: hidden;
         display: -webkit-box;
         /* white-space: nowrap; */
@@ -297,7 +312,6 @@ div.openingBox:hover {
         -webkit-line-clamp: 2;
         text-overflow: ellipsis;
     }
-
 
     .thmb-text {
         display: flex;
@@ -383,6 +397,14 @@ i.rounded-circle.btn.btn-outline-danger.p-1.fa-solid.fa-info {
     width: 2rem;
     height: 2rem;
 }
+
+/*.thmb-cover img.img-fluid {
+    height: 100%!important;
+    width: auto!important;
+    object-fit: cover;
+    object-position: center;
+}*/
+
 @keyframes scrolling3 {
     0% {
         transform: translateX(0);
