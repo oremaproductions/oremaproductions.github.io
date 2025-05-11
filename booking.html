@@ -193,10 +193,10 @@
     /* order: 1; */
 ">
                 <div class="col-12 w-auto d-flex align-items-center align-items-sm-start flex-col">
-                    <span class="fs-4 text-white font-1 d-sm-none" name="service_title">
-                        Service #1
+                    <span class="fs-4 text-white font-1 d-sm-none placeholder-glow" name="service_title">
+                        
                     </span>
-                    <p class="font-3 fs-7 col-12 text-white text-center text-sm-start d-sm-none fw-bold" name="service_price">
+                    <p class="font-3 fs-7 col-12 text-white text-center text-sm-start d-sm-none fw-bold placeholder-glow" name="service_price">
                     </p>
                     <p class="text-white m-0 fs-6 font-3 p-0 mb-4 d-sm-none">Let's get you on the calendar. </p>
                     <img src="" id="coverImg" alt="" class="img-fluid col-10 col-sm-12 p-1 rounded">
@@ -205,10 +205,10 @@
                 </div>
             </div>
             <div class="col-12 col-lg-5 col-sm-6 p-2 ">
-                <span class="fs-4 text-white font-1 d-none d-sm-block" name="service_title">
-                    Service #1
+                <span class="fs-4 text-white font-1 d-none d-sm-block  placeholder-glow" name="service_title">
+                    
                 </span>
-                <p class="font-3 fs-7 col-12 text-white text-center d-none text-sm-start d-sm-block fw-bold" name="service_price">
+                <p class="font-3 fs-7 col-12 text-white text-center d-none text-sm-start d-sm-block fw-bold placeholder-glow" name="service_price">
                 </p>
                 <p class="text-white m-0 fs-6 font-3 p-0 mb-4 d-none d-sm-block">Let's get you on the calendar. </p>
                 <div id="calendar-container" class="flatpickr-input" readonly="readonly"></div>
@@ -217,10 +217,11 @@
                     <div id="time-slot-btns" class="col-12 d-flex flex-wrap row-cols-3 p-2"></div>
                 </div>
                 <div class="p-2 col-12 mt-4" id="nextSteps">
-                    <form action="#" method="get">
-                        <input type="text" class="d-none" id="service" name="service">
-                        <input type="text" class="d-none" id="date" name="date">
-                        <input type="text" class="d-none" id="time" name="time">
+                    <form id="booking_form">
+                        <input type="text" class="d-none" id="booking_service" name="entry.2135943558">
+                        <input type="text" class="d-none" id="booking_date" name="entry.1510611054">
+                        <input type="text" class="d-none" id="booking_time" name="entry.1055399191">
+                        <input type="text" class="d-none" id="booking_email" name="entry.1704076191">
                         <div class="p-0 form-check d-flex flex-row align-items-center mb-2 gap-2">
                             <input class="form-check-input m-0" type="checkbox" onclick="handleCheck(this.checked)" value="" id="flexCheckDefault" style="
 ">
@@ -281,10 +282,10 @@
         <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js" integrity="sha256-9zljDKpE/mQxmaR4V2cGVaQ7arF3CcXxarvgr7Sj8Uc=" crossorigin="anonymous"></script>
         <script src="js/global.js"></script>
         <script src="js/dynamic_scrolling.js"></script>
-        <script src="js/booking.js"></script>
         <script src="js/services.js"></script>
+        <script src="js/booking.js"></script>
         <script type="text/javascript">
-            update_service(service_id);
+            update_service();
         </script>
     </body>
 

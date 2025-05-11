@@ -58,15 +58,15 @@ function showTimeSlots() {
 function setDateSlot(date) {
     // set hidden input for time slot  
     setTimeSlot("");
-    document.getElementById("date").value = date;
+    document.getElementById("booking_date").value = date;
 }
 
 function setTimeSlot(time) {
     // set hidden input for time slot 
-    document.getElementById("time").value = time;
+    document.getElementById("booking_time").value = time;
 
     //If values of inputs are filled, set opacity of btn to 1
-    if ((document.getElementById("time").value.length > 0) && (document.getElementById("date").value.length > 0)) {
+    if ((document.getElementById("booking_time").value.length > 0) && (document.getElementById("booking_date").value.length > 0)) {
         $("#nextSteps").css({ 'opacity': '1' });
     } else { // set opacity to 0
         $("#nextSteps").css({ 'opacity': '0' });
@@ -117,3 +117,36 @@ function updateTimeSlots(selectedDate) {
         timeBtns.appendChild(btn);
     });
 }
+//Lets send data to google form, then go to stripe
+function handleSubmit(e) {
+    e.preventDefault();
+    alert("yoo")
+}
+function generateID(){
+  return "booking-" + Math.random().toString(36).substr(2, 9);
+}
+async function sendToForms() {
+    let formData = new FormData(document.getElementById("booking_form"));
+    console.log('sendToForms() => ', formData);
+    await fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfMJeVI-N1UDlz-5oOWLzfPy-W5F-H0vaVGv3cboh03WDfjVA/formResponse', {
+        method: "POST",
+        body: formData,
+        mode: "no-cors"
+    });
+
+    return 'done';
+}
+document.getElementById("booking_form").addEventListener('submit', (e)=>{
+    e.preventDefault();
+
+    let email = prompt('Enter your email before continuing to payment.');
+    if(!email || !email.includes('@')) {
+        alert("Invalid email address");
+        return false
+    }
+
+    document.querySelector('#booking_email').value = email;
+    sendToForms().then(() => {
+        window.location.replace(`${active_stripe_link}?prefilled_email=${encodeURIComponent(email)}`);
+    });
+})
