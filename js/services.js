@@ -18,7 +18,7 @@ const services = {
             'description': 'All raw images in 1–24 hrs • 7 edits + Stop Motion • 24–72 hr turnaround • 2 people max',
             'title': 'Premium Package',
             'price': '$150 / 45 minutes',
-            'payment_link': ''
+            'payment_link': 'https://buy.stripe.com/test_cNi3cxbtt0uA1mecY02go01'
         }
     },
     'studio': {
@@ -27,14 +27,14 @@ const services = {
             'description': 'All raw images in 48 hrs • 10 edits • 3–7 day turnaround • 2 people max',
             'title': 'Silver Package',
             'price': '$250 / hr',
-            'payment_link': ''
+            'payment_link': 'https://buy.stripe.com/test_9B614p555elq9SK8HK2go05'
         },
         'gold': {
             'cover_img': 'imgs/orema3.jpg',
             'description': 'All raw images in 48 hrs • 15 edits • 7–10 day turnaround • 3 people max',
             'title': 'Gold Package',
             'price': '$350 / 2 hrs',
-            'payment_link': ''
+            'payment_link': 'https://buy.stripe.com/test_5kQ14p1ST7X22qi5vy2go06'
         },
     },
     'events': {
@@ -43,7 +43,7 @@ const services = {
             'description': 'All raw images in 5–7 business days • Light retouching, no edits • 2 hr min',
             'title': 'Events',
             'price': '$75 / hr',
-            'payment_link': ''
+            'payment_link': 'https://buy.stripe.com/test_6oUdRbappgty0ia0be2go04'
         },
     },
     'graduations': {
@@ -52,14 +52,14 @@ const services = {
             'description': 'All raw images in 48 hrs • 10 edits • 3–7 day turnaround • 1 person max',
             'title': 'Graduation (Basic)',
             'price': '$150 / 1 hr',
-            'payment_link': ''
+            'payment_link': 'https://buy.stripe.com/test_14A6oJ699a5ae90f682go03'
         },
         'gold': {
             'cover_img': 'imgs/orema6.jpg',
             'description': 'All raw images in 48 hrs • 15 edits • 7–10 day turnaround • 2 people max',
             'title': 'Graduation (Gold)',
             'price': '$250 / 2 hrs',
-            'payment_link': ''
+            'payment_link': 'https://buy.stripe.com/test_fZu8wRappgtye904ru2go02'
         }
     }
 
@@ -133,10 +133,8 @@ let counter = 0;
 
 function populate_other_services(active_category_name = tab, active_service_name = service, limit = __get_services_length()) {
     console.log(active_category_name);
-    let {
-        [active_category_name]: active_category, ...other_category_services } = services;
-    let {
-        [active_service_name]: active_service, ...similar_services } = services[active_category_name];
+    let {[active_category_name]: active_category, ...other_category_services } = services;
+    let {[active_service_name]: active_service, ...similar_services } = services[active_category_name];
     other_services = { ...other_category_services };
     other_services[active_category_name] = similar_services;
     let other_services_list = Object.values(other_services).flatMap(service => Object.values(service));
