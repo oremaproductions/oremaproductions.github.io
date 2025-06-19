@@ -23,14 +23,14 @@ const services = {
     },
     'studio': {
         'silver': {
-            'cover_img': 'imgs/orema9.jpg',
+            'cover_img': 'imgs/Covers/Silver Package/cover.jpg',
             'description': 'All raw images in 48 hrs • 10 edits • 3–7 day turnaround • 2 people max',
             'title': 'Silver Package',
             'price': '$250 / hr',
             'payment_link': 'https://buy.stripe.com/test_9B614p555elq9SK8HK2go05'
         },
         'gold': {
-            'cover_img': 'imgs/orema3.jpg',
+            'cover_img': 'imgs/Covers/Gold Package/cover.jpg',
             'description': 'All raw images in 48 hrs • 15 edits • 7–10 day turnaround • 3 people max',
             'title': 'Gold Package',
             'price': '$350 / 2 hrs',
@@ -39,7 +39,7 @@ const services = {
     },
     'events': {
         'events': {
-            'cover_img': 'imgs/orema19.jpg',
+            'cover_img': 'imgs/Covers/Events/cover.jpg',
             'description': 'All raw images in 5–7 business days • Light retouching, no edits • 2 hr min',
             'title': 'Events',
             'price': '$75 / hr',
@@ -48,14 +48,14 @@ const services = {
     },
     'graduations': {
         'basic': {
-            'cover_img': 'imgs/orema3.jpg',
+            'cover_img': 'imgs/Covers/Graduation/cover.jpg',
             'description': 'All raw images in 48 hrs • 10 edits • 3–7 day turnaround • 1 person max',
             'title': 'Graduation (Basic)',
             'price': '$150 / 1 hr',
             'payment_link': 'https://buy.stripe.com/test_14A6oJ699a5ae90f682go03'
         },
         'gold': {
-            'cover_img': 'imgs/orema6.jpg',
+            'cover_img': 'imgs/orema3.jpg',
             'description': 'All raw images in 48 hrs • 15 edits • 7–10 day turnaround • 2 people max',
             'title': 'Graduation (Gold)',
             'price': '$250 / 2 hrs',
