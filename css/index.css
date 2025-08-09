@@ -178,6 +178,9 @@ img.p-1.img-fluid {
 .fs-8{
     font-size: 0.55rem;
 }
+.fs-9{
+    font-size:large
+}
 .fs-8.dropdown-header{
     color:var(--prim-color);
 }
@@ -408,7 +411,30 @@ i.rounded-circle.btn.btn-outline-danger.p-1.fa-solid.fa-info {
     width: 2rem;
     height: 2rem;
 }
+span.fs-3.text-white.font-1.d-sm-block.moveLater {
+    line-height: 2.9rem;
+}
 
+
+button.font-3.btn.col-4.btn-outline-danger.btn-md.text-white.font-italic {
+    font-style: italic;
+    font-size: 0.7rem;
+}
+
+.text-white{
+    color: #e1e1e1!important;
+}
+
+.text-offwhite{
+    color:#c9c9c9!important
+}
+
+a.red_underline {
+    /* text-decoration-line: underline; */
+    text-decoration: none;
+    color: var(--prim-color);
+    text-decoration-color: var(--prim-color);
+}
 /*.thmb-cover img.img-fluid {
     height: 100%!important;
     width: auto!important;
